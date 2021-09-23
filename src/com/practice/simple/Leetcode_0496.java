@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Description leetcode 算法496题 【下一个更大元素】 I
- * Created by skilling on 2021/9/18 9:40
+ * Created by SkillingYu on 2021/9/18 9:40
  */
 public class Leetcode_0496 {
 

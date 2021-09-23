@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 /**
  * Description leetcode 算法1046题 【最后一块石头的重量】
- * Created by skilling on 2021/9/18 14:00
+ * Created by SkillingYu on 2021/9/18 14:00
  */
 public class Leetcode_1046 {
 
