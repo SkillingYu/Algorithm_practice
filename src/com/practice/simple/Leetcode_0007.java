@@ -6,19 +6,17 @@ package com.practice.simple;
  */
 public class Leetcode_0007 {
 
-
+    /**
+     * 给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。
+     * 如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0。
+     * 假设环境不允许存储 64 位整数（有符号或无符号）。
+     */
     public static void main(String[] args) {
-        int reverse = reverse(-109);
+        int reverse = reverse2(-109999999);
         System.out.println(reverse);
-
-
-        /*double pow1 = Math.pow(-2, 31);
-        double pow2 = Math.pow(2, 31);
-        if (!(anInt>(int)pow1&&anInt<(int)pow2-1)){
-            return 0;
-        }*/
     }
 
+    /** 自解 */
     public static int reverse(int x) {
         String s = String.valueOf(x);
         StringBuilder sb = new StringBuilder();
@@ -56,5 +54,21 @@ public class Leetcode_0007 {
         } catch (NumberFormatException e) {
             return 0;
         }
+    }
+
+    /** 最优解法 */
+    public static int reverse2(int x) {
+        int rev = 0;
+        while (x != 0) {
+            if (rev < Integer.MIN_VALUE / 10 || rev > Integer.MAX_VALUE / 10) {
+                return 0;
+            }
+            //取出x的末尾数字
+            int digit = x % 10;
+            x /= 10;
+            // 将取出的数字推入rev末尾
+            rev = rev * 10 + digit;
+        }
+        return rev;
     }
 }
