@@ -17,7 +17,7 @@ public class Leetcode_0009 {
         int rec=0;
         int num = x;
 
-        //0和尾数为0的数不是回文数
+        //尾数为0的数和小于零的数 不是回文数
         if ((x%10==0||x<0)&&x!=0){
             return false;
         }
